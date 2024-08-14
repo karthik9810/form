@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Query Parameters</title>
+</head>
+<body>
+    <h1>Query Parameters</h1>
+    <div id="query-params"></div>
+
+    <script>
+        // Get the query string from the URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Display each parameter
+        params.forEach((value, key) => {
+            document.getElementById('query-params').innerHTML += `<h1>${key}: ${value}</h1>`;
+        });
+    </script>
+</body>
+</html>
